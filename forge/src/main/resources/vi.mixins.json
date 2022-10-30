@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "net.techtastic.vi.forge.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "plugin": "net.techtastic.vi.forge.mixin.ValkyrienForgeMixinConfigPlugin",
+  "mixins": [],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}

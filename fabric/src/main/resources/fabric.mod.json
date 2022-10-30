@@ -1,13 +1,14 @@
 {
   "schemaVersion": 1,
-  "id": "vs_eureka",
+  "id": "vi",
   "version": "${version}",
-  "name": "VS Eureka Mod",
-  "description": "Basically Archimedes Ships, but with VS2 as the backend!",
+  "name": "Valkyrien Isles",
+  "description": "Floating Islands with Valkyrien Skies physics",
   "authors": [
     "ewoudje",
     "Tri0de",
-    "Rubydesic"
+    "Rubydesic",
+    "TechTastic"
   ],
   "contributors": [
     "Copper",
@@ -19,22 +20,22 @@
     "sources": "https://github.com/ValkyrienSkies/Eureka"
   },
   "license": "Apache-2.0",
-  "icon": "assets/vs_eureka/icon.png",
+  "icon": "assets/vi/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "org.valkyrienskies.eureka.fabric.EurekaModFabric"
+      "net.techtastic.vi.fabric.ValkyrienIslesModFabric"
     ],
     "client": [
-      "org.valkyrienskies.eureka.fabric.EurekaModFabric${'$'}Client"
+      "net.techtastic.vi.fabric.ValkyrienIslesModFabric${'$'}Client"
     ],
     "modmenu": [
-      "org.valkyrienskies.eureka.fabric.EurekaModFabric${'$'}ModMenu"
+      "net.techtastic.vi.fabric.ValkyrienIslesModFabric${'$'}ModMenu"
     ]
   },
   "mixins": [
-    "vs_eureka-common.mixins.json",
-    "vs_eureka.mixins.json"
+    "vi-common.mixins.json",
+    "vi.mixins.json"
   ],
   "depends": {
     "minecraft": ">=1.16.5"

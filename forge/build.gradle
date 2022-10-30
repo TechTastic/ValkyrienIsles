@@ -16,8 +16,8 @@ loom {
 
     forge {
         convertAccessWideners = true
-        mixinConfig "vs_eureka.mixins.json"
-        mixinConfig "vs_eureka-common.mixins.json"
+        mixinConfig "vi.mixins.json"
+        mixinConfig "vi-common.mixins.json"
         extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
     }
 }
@@ -91,7 +91,7 @@ components.java {
 publishing {
     publications {
         mavenCommon(MavenPublication) {
-            groupId = "org.valkyrienskies.eureka"
+            groupId = "net.techtastic.vi"
             version = project.version
             artifactId = rootProject.archives_base_name + "-" + project.name
             from components.java
