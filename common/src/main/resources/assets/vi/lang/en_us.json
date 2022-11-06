@@ -1,6 +1,7 @@
 {
   "itemGroup.vi.vi_tab": "Valkyrien Isles",
-  "block.vi.anchor": "Anchor",
-  "block.vi.balloon": "Balloon",
-  "block.vi.floater": "Floater"
+  "block.vi.islandite_cluster": "Islandite Cluster",
+  "block.vi.islandite_bud": "Islandite Bud",
+  "block.vi.budding_islandite": "Budding Islandite",
+  "block.vi.islandite_block": "Block of Islandite"
 }

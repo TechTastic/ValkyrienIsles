@@ -5,52 +5,24 @@ import net.minecraft.core.Registry
 import net.minecraft.world.item.BlockItem
 import net.minecraft.world.item.Item
 import net.minecraft.world.level.block.Block
-import net.minecraft.world.level.block.Blocks
-import net.minecraft.world.level.block.FireBlock
-import net.minecraft.world.level.block.SoundType
 import net.minecraft.world.level.block.state.BlockBehaviour
 import net.minecraft.world.level.material.Material
-import net.minecraft.world.level.material.MaterialColor
-import net.techtastic.vi.block.AnchorBlock
-import net.techtastic.vi.block.BalloonBlock
-import net.techtastic.vi.block.FloaterBlock
-import org.valkyrienskies.mod.event.RegistryEvents
+import net.techtastic.vi.block.*
 
 @Suppress("unused")
 object ModBlocks {
     private val BLOCKS = DeferredRegister.create(ValkyrienIslesMod.MOD_ID, Registry.BLOCK_REGISTRY)
 
-    val ANCHOR = AnchorBlock byName "anchor"
-    val FLOATER = FloaterBlock byName "floater"
+    val ISLANDITE_CLUSTER = IslanditeCluster byName "islandite_cluster"
+    val ISLANDITE_BUD = IslanditeBud byName "islandite_bud"
+    val BUDDING_ISLANDITE = BuddingIslandite byName "budding_islandite"
+    val ISLANDITE_BLOCK = Block(BlockBehaviour.Properties.of(Material.GLASS)) byName "islandite_block"
 
-    // region Balloons
-    val BALLOON = BalloonBlock(
-        BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.WOOL).sound(SoundType.WOOL)
-    ) byName "balloon"
-
-    fun register() {
+    fun registerModBlocks() {
         BLOCKS.register()
-
-        RegistryEvents.onRegistriesComplete {
-            makeFlammables()
-        }
+        ValkyrienIslesMod.LOGGER.info("Registering all Mod Blocks for " + ValkyrienIslesMod.MOD_ID + "!")
     }
 
-    // region Flammables
-    // TODO make this part of the registration sequence
-    fun flammableBlock(block: Block?, flameOdds: Int, burnOdds: Int) {
-        val fire = Blocks.FIRE as FireBlock
-        fire.setFlammable(block, flameOdds, burnOdds)
-    }
-
-    fun makeFlammables() {
-        flammableBlock(BALLOON.get(), 30, 60)
-        flammableBlock(FLOATER.get(), 5, 20)
-    }
-    // endregion
-
-    // Blocks should also be registered as items, if you want them to be able to be held
-    // aka all blocks
     fun registerItems(items: DeferredRegister<Item>) {
         BLOCKS.iterator().forEach {
             items.register(it.id) { BlockItem(it.get(), Item.Properties().tab(ModItems.TAB)) }

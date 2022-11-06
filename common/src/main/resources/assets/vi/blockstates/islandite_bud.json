@@ -1,0 +1,82 @@
+{
+  "variants": {
+    "facing=down,growth=0": {
+      "model": "vi:block/islandite_bud_0",
+      "x": 180
+    },
+    "facing=east,growth=0": {
+      "model": "vi:block/islandite_bud_0",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north,growth=0": {
+      "model": "vi:block/islandite_bud_0",
+      "x": 90
+    },
+    "facing=south,growth=0": {
+      "model": "vi:block/islandite_bud_0",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up,growth=0": {
+      "model": "vi:block/islandite_bud_0"
+    },
+    "facing=west,growth=0": {
+      "model": "vi:block/islandite_bud_0",
+      "x": 90,
+      "y": 270
+    },
+    "facing=down,growth=1": {
+      "model": "vi:block/islandite_bud_1",
+      "x": 181
+    },
+    "facing=east,growth=1": {
+      "model": "vi:block/islandite_bud_1",
+      "x": 91,
+      "y": 91
+    },
+    "facing=north,growth=1": {
+      "model": "vi:block/islandite_bud_1",
+      "x": 91
+    },
+    "facing=south,growth=1": {
+      "model": "vi:block/islandite_bud_1",
+      "x": 91,
+      "y": 181
+    },
+    "facing=up,growth=1": {
+      "model": "vi:block/islandite_bud_1"
+    },
+    "facing=west,growth=1": {
+      "model": "vi:block/islandite_bud_1",
+      "x": 91,
+      "y": 271
+    },
+    "facing=down,growth=2": {
+      "model": "vi:block/islandite_bud_2",
+      "x": 182
+    },
+    "facing=east,growth=2": {
+      "model": "vi:block/islandite_bud_2",
+      "x": 92,
+      "y": 92
+    },
+    "facing=north,growth=2": {
+      "model": "vi:block/islandite_bud_2",
+      "x": 92
+    },
+    "facing=south,growth=2": {
+      "model": "vi:block/islandite_bud_2",
+      "x": 92,
+      "y": 182
+    },
+    "facing=up,growth=2": {
+      "model": "vi:block/islandite_bud_2"
+    },
+    "facing=west,growth=2": {
+      "model": "vi:block/islandite_bud_2",
+      "x": 92,
+      "y": 272
+    }
+  }
+}

@@ -1,17 +1,19 @@
 package net.techtastic.vi
 
 import me.shedaniel.architectury.event.events.TickEvent
+import org.slf4j.LoggerFactory
 import org.valkyrienskies.core.config.VSConfigClass
 
 object ValkyrienIslesMod {
     const val MOD_ID = "vi"
+    val LOGGER = LoggerFactory.getLogger(MOD_ID)
     private val nextTick1 = mutableListOf<() -> Unit>()
     private val nextTick2 = mutableListOf<() -> Unit>()
     private var isTick1 = false
 
     @JvmStatic
     fun init() {
-        ModBlocks.register()
+        ModBlocks.registerModBlocks()
         ModBlockEntities.register()
         ModItems.register()
         ModEntities.register()

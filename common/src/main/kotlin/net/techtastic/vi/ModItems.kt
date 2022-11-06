@@ -16,7 +16,7 @@ object ModItems {
             ValkyrienIslesMod.MOD_ID,
             "vi_tab"
         )
-    ) { ItemStack(ModBlocks.ANCHOR.get()) }
+    ) { ItemStack(ModBlocks.ISLANDITE_CLUSTER.get()) }
 
     fun register() {
         ModBlocks.registerItems(ITEMS)
